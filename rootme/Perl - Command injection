@@ -1,0 +1,6 @@
+ ./setuid-wrapper
+*************************
+* Stat File Service    *
+*************************
+>>> | cat .passwd
+~~~ Statistics for "| cat .passwd" ~~~
