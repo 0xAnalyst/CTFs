@@ -1,0 +1,136 @@
+root@root ~/rootme $ volatility -f ch2.dmp --profile Win7SP0x86 procdump -D output/
+Volatility Foundation Volatility Framework 2.5
+Process(V) ImageBase  Name                 Result
+---------- ---------- -------------------- ------
+0x87978b78 ---------- System               Error: PEB at 0x0 is unavailable (possibly due to paging)
+0x88c3ed40 0x48030000 smss.exe             Error: ImageBaseAddress at 0x48030000 is unavailable (possibly due to paging)
+0x8929fd40 0x4a060000 csrss.exe            Error: ImageBaseAddress at 0x4a060000 is unavailable (possibly due to paging)
+0x892ac2b8 ---------- wininit.exe          Error: PEB at 0x7ffd7000 is unavailable (possibly due to paging)
+0x88d03a00 0x4a060000 csrss.exe            OK: executable.468.exe
+0x892ced40 0x00c10000 winlogon.exe         Error: ImageBaseAddress at 0xc10000 is unavailable (possibly due to paging)
+0x896294c0 0x008d0000 services.exe         OK: executable.560.exe
+0x896427b8 0x00a00000 lsass.exe            Error: ImageBaseAddress at 0xa00000 is unavailable (possibly due to paging)
+0x8962f7e8 0x00940000 lsm.exe              Error: ImageBaseAddress at 0x940000 is unavailable (possibly due to paging)
+0x8962f030 0x00400000 svchost.exe          Error: ImageBaseAddress at 0x400000 is unavailable (possibly due to paging)
+0x897b5c20 0x00400000 svchost.exe          Error: ImageBaseAddress at 0x400000 is unavailable (possibly due to paging)
+0x89805420 0x00400000 svchost.exe          OK: executable.832.exe
+0x89852918 0x00400000 svchost.exe          OK: executable.904.exe
+0x8986b030 0x00400000 svchost.exe          OK: executable.928.exe
+0x898911a8 0x00400000 svchost.exe          Error: ImageBaseAddress at 0x400000 is unavailable (possibly due to paging)
+0x898b2790 0x00400000 svchost.exe          OK: executable.1172.exe
+0x898a7868 0x00320000 AvastSvc.exe         OK: executable.1220.exe
+0x8a0f9c40 0x00450000 spoolsv.exe          Error: ImageBaseAddress at 0x450000 is unavailable (possibly due to paging)
+0x8a102748 0x00400000 svchost.exe          OK: executable.1748.exe
+0x88cded40 ---------- sppsvc.exe           Error: PEB at 0x7ffd5000 is unavailable (possibly due to paging)
+0x8a1d84e0 0x00400000 vmtoolsd.exe         OK: executable.1968.exe
+0x9541c7e0 ---------- wlms.exe             Error: PEB at 0x7ffd4000 is unavailable (possibly due to paging)
+0x8a1f5030 ---------- VMUpgradeHelpe       Error: PEB at 0x7ffd7000 is unavailable (possibly due to paging)
+0x9542a030 0x00400000 TPAutoConnSvc.       OK: executable.1612.exe
+0x87ac0620 0x00c30000 taskhost.exe         OK: executable.2352.exe
+0x87ad44d0 0x00f50000 dwm.exe              OK: executable.2496.exe
+0x87ac6030 0x00b30000 explorer.exe         OK: executable.2548.exe
+0x87ae2880 0x00400000 TPAutoConnect.       OK: executable.2568.exe
+0x87a9c288 0x000d0000 conhost.exe          Error: ImageBaseAddress at 0xd0000 is unavailable (possibly due to paging)
+0x87b82438 0x00400000 VMwareTray.exe       OK: executable.2660.exe
+0x87aa9220 0x00400000 VMwareUser.exe       OK: executable.2676.exe
+0x87b784b0 0x00ec0000 AvastUI.exe          OK: executable.2720.exe
+0x898fe8c0 0x00bd0000 StikyNot.exe         OK: executable.2744.exe
+0x87b6b030 0x00400000 iexplore.exe         OK: executable.2772.exe
+0x898fbb18 0x001f0000 SearchIndexer.       OK: executable.2900.exe
+0x87bd35b8 0x00450000 wmpnetwk.exe         Error: ImageBaseAddress at 0x450000 is unavailable (possibly due to paging)
+0x89f3d2c0 0x00400000 svchost.exe          Error: ImageBaseAddress at 0x400000 is unavailable (possibly due to paging)
+0x87c6a2a0 ---------- swriter.exe          Error: PEB at 0x7ffd9000 is unavailable (possibly due to paging)
+0x87ba4030 0x00290000 soffice.exe          Error: ImageBaseAddress at 0x290000 is unavailable (possibly due to paging)
+0x95483d18 ---------- soffice.bin          Error: PEB at 0x7ffdf000 is unavailable (possibly due to paging)
+0x87b8ca58 0x012b0000 soffice.bin          OK: executable.3564.exe
+0x89f1d3e8 0x00400000 svchost.exe          Error: ImageBaseAddress at 0x400000 is unavailable (possibly due to paging)
+0x95495c18 0x005c0000 taskmgr.exe          OK: executable.1232.exe
+0x87bf7030 0x4a330000 cmd.exe              OK: executable.3152.exe
+0x87c595b0 0x000d0000 conhost.exe          OK: executable.3228.exe
+0x89898030 0x4a330000 cmd.exe              OK: executable.1616.exe
+0x954826b0 0x000d0000 conhost.exe          OK: executable.2168.exe
+0x9549f678 0x01250000 iexplore.exe         OK: executable.1136.exe
+0x87d4d338 0x01250000 iexplore.exe         Error: ImageBaseAddress at 0x1250000 is unavailable (possibly due to paging)
+0x87c90d40 0x00b80000 audiodg.exe          OK: executable.1720.exe
+0x87cbfd40 0x00210000 winpmem-1.3.1.       OK: executable.3144.exe
+root@AHA ~/rootme $ cd output/
+root@AHA ~/rootme/output $ ls
+executable.1136.exe  executable.1232.exe  executable.1720.exe  executable.2168.exe  executable.2548.exe  executable.2676.exe  executable.2772.exe  executable.3152.exe  executable.468.exe  executable.904.exe
+executable.1172.exe  executable.1612.exe  executable.1748.exe  executable.2352.exe  executable.2568.exe  executable.2720.exe  executable.2900.exe  executable.3228.exe  executable.560.exe  executable.928.exe
+executable.1220.exe  executable.1616.exe  executable.1968.exe  executable.2496.exe  executable.2660.exe  executable.2744.exe  executable.3144.exe  executable.3564.exe  executable.832.exe
+root@AHA ~/rootme/output $ file *
+executable.1136.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.1172.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.1220.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.1232.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.1612.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.1616.exe: PE32 executable (console) Intel 80386, for MS Windows
+executable.1720.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.1748.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.1968.exe: PE32 executable (console) Intel 80386, for MS Windows
+executable.2168.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.2352.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.2496.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.2548.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.2568.exe: PE32 executable (console) Intel 80386, for MS Windows
+executable.2660.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.2676.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.2720.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.2744.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.2772.exe: PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows
+executable.2900.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.3144.exe: PE32 executable (console) Intel 80386, for MS Windows
+executable.3152.exe: PE32 executable (console) Intel 80386, for MS Windows
+executable.3228.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.3564.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+executable.468.exe:  PE32 executable (native) Intel 80386, for MS Windows
+executable.560.exe:  PE32 executable (GUI) Intel 80386, for MS Windows
+executable.832.exe:  PE32 executable (GUI) Intel 80386, for MS Windows
+executable.904.exe:  PE32 executable (GUI) Intel 80386, for MS Windows
+executable.928.exe:  PE32 executable (GUI) Intel 80386, for MS Windows
+root@AHA ~/rootme/output $ md5sum
+md5sum            md5sum.textutils  
+root@AHA ~/rootme/output $ md5sum *
+93c75985c70fc931cc6e3df4bead0131  executable.1136.exe
+681c9f79f7dd63c97b3d79acec887740  executable.1172.exe
+2ca4677aab7b53d7cea15a27f6294ad2  executable.1220.exe
+bb4c4573cfbb3ece72feacc7561cc202  executable.1232.exe
+94aea5aa131260c3ccfd970e60f14645  executable.1612.exe
+03551e3f6a4aceb7733dca41e771a21c  executable.1616.exe
+5c28e064ace04287fc4a07229126d126  executable.1720.exe
+681c9f79f7dd63c97b3d79acec887740  executable.1748.exe
+97adcd0fff26ed45413530b1122513a7  executable.1968.exe
+dae988cd21e80c1f6e212d409d369d7a  executable.2168.exe
+dd7595c8706a9d8a1449f06f0f8c7b56  executable.2352.exe
+868035c5a6675546307f5f5f11696743  executable.2496.exe
+f61306fe22aa8567d31d5521bdd120c2  executable.2548.exe
+da30c4257f31b73044f1cf5052248a0d  executable.2568.exe
+1cc915e3c8f25ebc8e9d860762897b03  executable.2660.exe
+786680ace153523a2dd9d7913b7f75de  executable.2676.exe
+f15c2f2518a8e5b15860e49b82261f6d  executable.2720.exe
+5f252d8c3952a69794f323593f29f8e3  executable.2744.exe
+05a065421caa9215958deca72a5b15f3  executable.2772.exe
+225ca13fab52cfbf384a9ce0b409477b  executable.2900.exe
+5ef4fc3590ef7d0bf8aa60b65fbcb8bd  executable.3144.exe
+45a74f776dcda59794f558106782f116  executable.3152.exe
+5ac04d1fe854bf446a8669270e3549c6  executable.3228.exe
+9ab436050e22280eedb8e3e806c75403  executable.3564.exe
+3ddcdfc030a54321d7eb90981bf91841  executable.468.exe
+a39b4a04b33385c6d5349c7d3f07237e  executable.560.exe
+681c9f79f7dd63c97b3d79acec887740  executable.832.exe
+681c9f79f7dd63c97b3d79acec887740  executable.904.exe
+root@AHA ~/rootme $ volatility -f ch2.dmp --profile Win7SP0x86  printkey -K "Software\Microsoft\Windows\CurrentVersion\Run"
+root@AHA ~/rootme $ volatility -f ch2.dmp --profile Win7SP0x86  printkey -K "Software\Microsoft\Windows\CurrentVersion\Run"
+Volatility Foundation Volatility Framework 2.5
+Legend: (S) = Stable   (V) = Volatile
+
+----------------------------
+Registry: \??\C:\Users\John Doe\ntuser.dat
+Key name: Run (S)
+Last updated: 2013-01-12 14:13:19 UTC+0000
+
+Subkeys:
+
+Values:
+REG_SZ        RESTART_STICKY_NOTES : (S) C:\Windows\System32\StikyNot.exe
+REG_SZ        IEPreload       : (S) "C:\Users\John Doe\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\iexplore.exe"
