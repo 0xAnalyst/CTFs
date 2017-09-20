@@ -1,0 +1,14 @@
+USE OPTIONS METHOD 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Apr 2017 22:56:22 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: close
+Vary: Accept-Encoding
+Content-Length: 159
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+</head>
