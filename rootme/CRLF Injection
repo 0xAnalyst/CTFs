@@ -13,26 +13,3 @@ Connection: close
 Upgrade-Insecure-Requests: 1
 
 Response
-
-
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Apr 2017 18:32:51 GMT
-Content-Type: text/html; charset=UTF-8
-Connection: close
-Vary: Accept-Encoding
-Expires: Thu, 19 Nov 1981 08:52:00 GMT
-Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
-Pragma: no-cache
-Content-Length: 983
-
-
-      <html>
-     <body><link rel='stylesheet' property='stylesheet' id='s' type='text/css' href='/template/s.css' media='all' /><iframe id='iframe' src='https://www.root-me.org/?page=externe_header'></iframe><p class='leak'><a href='https://www.root-me.org/en/breve/Publishing-solutions-on-Internet'>Leaking solutions on Internet is forbidden</a></p>
-	<h1>Authentication v 0.04</h1>
-	<form action="" method="GET">
-	  Login&nbsp;<br/>
-	  <input type="text" name="username" /><br/><br/>
-	  Password&nbsp;<br/>
-	  <input type="password" name="password" /><br/><br/>
-	  <br/><br/>
